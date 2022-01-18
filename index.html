@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <script src="https://kit.fontawesome.com/11acc5a5c1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <title> My Wedding</title>
+</head>
+
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: auto;
+            font-family: 'cookie', cursive;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            background-color: #ff99b6;
+            overflow: hidden;
+        }
+
+        .banner {
+            width: 100%;
+            height: 650px;
+            background-image: url(https://images.pexels.com/photos/949586/pexels-photo-949586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            border-radius: 0 0 500px 0;
+        }
+
+        .nav {
+            width: 90%;
+            height: auto;
+            background-color: rgba(255, 200, 200, .7);
+            border-radius: 30px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav b {
+            font-size: 40px;
+            margin-left: 20px;
+        }
+
+        .menu {
+            width: 50%;
+            height: 60px;
+            border-radius: 30px;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+            transition-duration: .5s;
+        }
+
+        .menu a {
+            text-decoration: none;
+            font-size: 30px;
+            color: #333;
+            font-weight: bolder;
+            transition-duration: .5s;
+        }
+
+        .menu a:hover {
+            border-bottom: 5px solid #f15;
+        }
+
+        .text {
+            width: 100%;
+            position: relative;
+            top: 40px;
+            left: 20px;
+            font-size: 50px;
+            text-align: left;
+        }
+
+        .text h1 {
+            color: #f15;
+            text-shadow: 0 3px 10px rgba(0, 0, 0, .5);
+        }
+
+        .text .date {
+            color: #fff;
+            background-color: #f15;
+            padding: 5px;
+            border-radius: 40px 0 40px 0;
+            transition-duration: .5s;
+        }
+
+        .text .date:hover {
+            background-color: #fff;
+            color: #f15;
+        }
+
+        .section {
+            width: 100%;
+            height: auto;
+            background-color: #efefef;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .us {
+            width: 80%;
+            height: auto;
+            background-color: #fff;
+            border-radius: 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 3px 10px 0 rgba(100, 100, 100, .3);
+        }
+
+        .us img {
+            width: 300px;
+            height: 400px;
+            border-radius: 50%;
+            border-top: 10px solid #f15;
+            border-bottom: 10px solid #f15;
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            width: 100%;
+            text-align: center;
+            color: #f15;
+            font-size: 60px;
+        }
+
+        .us1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .us1 span {
+            color: #fff;
+            font-size: 40px;
+            padding: 8px;
+            background-color: #f15;
+            border-radius: 8px;
+        }
+
+        #meettext {
+            color: #f15;
+            font-size: 40px;
+        }
+
+        .meet {
+            width: 80%;
+            height: auto;
+            background-color: #fff;
+            border-radius: 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 30px;
+            box-shadow: 0 3px 10px 0 rgba(100, 100, 100, .3);
+        }
+
+        .meet img {
+            width: 50%;
+            height: 300px;
+            display: inline;
+            border: 2px solid #f15;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .meet p {
+            font-size: 35px;
+            line-height: 30px;
+            color: #333;
+        }
+
+        .partys {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .party {
+            width: 80%;
+            height: auto;
+            background-color: #fff;
+            border-radius: 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 30px;
+            box-shadow: 0 3px 10px 0 rgba(100, 100, 100, .3);
+        }
+
+        .party img {
+            width: 50%;
+            height: 300px;
+            display: inline;
+            border: 2px solid #f15;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .party p {
+            font-size: 35px;
+            line-height: 30px;
+            color: #333;
+        }
+
+        #sansname {
+            position: absolute;
+            left: 45%;
+            color: #f15;
+            font-size: 2em;
+
+        }
+
+        #sansnamei {
+            position: absolute;
+            left: 25%;
+            color: #f15;
+            font-size: 2em;
+        }
+
+        #sansnames {
+            position: absolute;
+            left: 70%;
+            color: #f15;
+            font-size: 2em;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #sansname {
+                position: absolute;
+                left: 45%;
+                color: #f15;
+                font-size: 0.9em;
+
+            }
+
+            #sansnames {
+                position: absolute;
+                left: 60%;
+                /* top: 10px; */
+                color: #f15;
+                font-size: 0.8em;
+            }
+
+            #sansnamei {
+                position: absolute;
+                left: 33%;
+                /* top: 10px; */
+                color: #f15;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="banner">
+            <div class="nav">
+                <b>Sanskriti & Ankit</b>
+                <div class="menu">
+                    <a href="#">Home</a>
+                    <a href="#us">Us</a>
+                    <a href="#meet">Meet</a>
+                    <a href="#date">Weeding Date</a>
+                </div>
+            </div>
+            <div class="text">
+                <h1>Sanskriti & Ankit</h1>
+                <!-- <div class="countdown"></div> -->
+                <span class="date countdown"> 00 : 00 : 00 : 00</span>
+            </div>
+        </div>
+        <div class="section">
+            <div class="us">
+                <h2><a name="us">Us</a></h2>
+                <div class="us1">
+                    <img src="./img/ankit.jpeg">
+                    <span>Sanskriti is mine!</span>
+                </div>
+                <div class="us1">
+                    <img src="./img/WhatsApp Image 2022-01-18 at 9.39.47 PM.jpeg">
+                    <span>She is Sanskriti ,My Love</span>
+                </div>
+            </div>
+            <div class="meet">
+                <h2><a name="meet">Meet</a></h2>
+                <img
+                    src="https://images.pexels.com/photos/6567655/pexels-photo-6567655.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                <p>I meet in collage first year.I had purpose her. We were friends for the first few days.
+                    Then she said love you.We have broken up many times but still they love each other. Don't know why
+                    but it seems I can't live without her.....</p>
+                <p class="Meet meet" id="meettext">many days have passed since the Meet</p>
+            </div>
+            <div class="party">
+                <h2><a name="date">Weeding Date</a></h2>
+                <img src="https://i.ibb.co/dMb2T7P/wed-party.jpg">
+                <p>So i plan to get married on Date Dec 23, 2025 . may god fulfill my wish soon
+                    .....</p>
+                    <audio controls autoplay>
+                        <source src="song.mp3" type="audio/mp3">
+                    </audio>
+            </div>
+            <div class="party">
+                <canvas id="canvas" class="partys"></canvas>
+                <h1 id="sansnamei">I</h1>
+                <h1 id="sansname">LOVE</h1>
+                <h1 id="sansnames">SANSKRITI</h1>
+               
+            </div>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+    <script>
+        // JavaScript Document
+        var canvas = document.getElementById("canvas");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Initialize the GL context
+        var gl = canvas.getContext('webgl');
+        if (!gl) {
+            console.error("Unable to initialize WebGL.");
+        }
+
+        //Time
+        var time = 0.0;
+
+        //************** Shader sources **************
+
+        var vertexSource = `
+attribute vec2 position;
+void main() {
+	gl_Position = vec4(position, 0.0, 1.0);
+}
+`;
+
+        var fragmentSource = `
+precision highp float;
+
+uniform float width;
+uniform float height;
+vec2 resolution = vec2(width, height);
+
+uniform float time;
+
+#define POINT_COUNT 8
+
+vec2 points[POINT_COUNT];
+const float speed = -0.5;
+const float len = 0.25;
+float intensity = 1.3;
+float radius = 0.008;
+
+//https://www.shadertoy.com/view/MlKcDD
+//Signed distance to a quadratic bezier
+float sdBezier(vec2 pos, vec2 A, vec2 B, vec2 C){    
+	vec2 a = B - A;
+	vec2 b = A - 2.0*B + C;
+	vec2 c = a * 2.0;
+	vec2 d = A - pos;
+
+	float kk = 1.0 / dot(b,b);
+	float kx = kk * dot(a,b);
+	float ky = kk * (2.0*dot(a,a)+dot(d,b)) / 3.0;
+	float kz = kk * dot(d,a);      
+
+	float res = 0.0;
+
+	float p = ky - kx*kx;
+	float p3 = p*p*p;
+	float q = kx*(2.0*kx*kx - 3.0*ky) + kz;
+	float h = q*q + 4.0*p3;
+
+	if(h >= 0.0){ 
+		h = sqrt(h);
+		vec2 x = (vec2(h, -h) - q) / 2.0;
+		vec2 uv = sign(x)*pow(abs(x), vec2(1.0/3.0));
+		float t = uv.x + uv.y - kx;
+		t = clamp( t, 0.0, 1.0 );
+
+		// 1 root
+		vec2 qos = d + (c + b*t)*t;
+		res = length(qos);
+	}else{
+		float z = sqrt(-p);
+		float v = acos( q/(p*z*2.0) ) / 3.0;
+		float m = cos(v);
+		float n = sin(v)*1.732050808;
+		vec3 t = vec3(m + m, -n - m, n - m) * z - kx;
+		t = clamp( t, 0.0, 1.0 );
+
+		// 3 roots
+		vec2 qos = d + (c + b*t.x)*t.x;
+		float dis = dot(qos,qos);
+        
+		res = dis;
+
+		qos = d + (c + b*t.y)*t.y;
+		dis = dot(qos,qos);
+		res = min(res,dis);
+		
+		qos = d + (c + b*t.z)*t.z;
+		dis = dot(qos,qos);
+		res = min(res,dis);
+
+		res = sqrt( res );
+	}
+    
+	return res;
+}
+
+
+//http://mathworld.wolfram.com/HeartCurve.html
+vec2 getHeartPosition(float t){
+	return vec2(16.0 * sin(t) * sin(t) * sin(t),
+							-(13.0 * cos(t) - 5.0 * cos(2.0*t)
+							- 2.0 * cos(3.0*t) - cos(4.0*t)));
+}
+
+//https://www.shadertoy.com/view/3s3GDn
+float getGlow(float dist, float radius, float intensity){
+	return pow(radius/dist, intensity);
+}
+
+float getSegment(float t, vec2 pos, float offset, float scale){
+	for(int i = 0; i < POINT_COUNT; i++){
+		points[i] = getHeartPosition(offset + float(i)*len + fract(speed * t) * 6.28);
+	}
+    
+	vec2 c = (points[0] + points[1]) / 2.0;
+	vec2 c_prev;
+	float dist = 10000.0;
+    
+	for(int i = 0; i < POINT_COUNT-1; i++){
+		//https://tinyurl.com/y2htbwkm
+		c_prev = c;
+		c = (points[i] + points[i+1]) / 2.0;
+		dist = min(dist, sdBezier(pos, scale * c_prev, scale * points[i], scale * c));
+	}
+	return max(0.0, dist);
+}
+
+void main(){
+	vec2 uv = gl_FragCoord.xy/resolution.xy;
+	float widthHeightRatio = resolution.x/resolution.y;
+	vec2 centre = vec2(0.5, 0.5);
+	vec2 pos = centre - uv;
+	pos.y /= widthHeightRatio;
+	//Shift upwards to centre heart
+	pos.y += 0.02;
+	float scale = 0.000015 * height;
+	
+	float t = time;
+    
+	//Get first segment
+  float dist = getSegment(t, pos, 0.0, scale);
+  float glow = getGlow(dist, radius, intensity);
+  
+  vec3 col = vec3(0.0);
+
+	//White core
+  col += 10.0*vec3(smoothstep(0.003, 0.001, dist));
+  //Pink glow
+  col += glow * vec3(1.0,0.05,0.3);
+  
+  //Get second segment
+  dist = getSegment(t, pos, 3.4, scale);
+  glow = getGlow(dist, radius, intensity);
+  
+  //White core
+  col += 10.0*vec3(smoothstep(0.003, 0.001, dist));
+  //Blue glow
+  col += glow * vec3(0.1,0.4,1.0);
+        
+	//Tone mapping
+	col = 1.0 - exp(-col);
+
+	//Gamma
+	col = pow(col, vec3(0.4545));
+
+	//Output to screen
+ 	gl_FragColor = vec4(col,1.0);
+}
+`;
+
+        //************** Utility functions **************
+
+        window.addEventListener('resize', onWindowResize, false);
+
+        function onWindowResize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            gl.viewport(0, 0, canvas.width, canvas.height);
+            gl.uniform1f(widthHandle, window.innerWidth);
+            gl.uniform1f(heightHandle, window.innerHeight);
+        }
+
+
+        //Compile shader and combine with source
+        function compileShader(shaderSource, shaderType) {
+            var shader = gl.createShader(shaderType);
+            gl.shaderSource(shader, shaderSource);
+            gl.compileShader(shader);
+            if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                throw "Shader compile failed with: " + gl.getShaderInfoLog(shader);
+            }
+            return shader;
+        }
+
+        //From https://codepen.io/jlfwong/pen/GqmroZ
+        //Utility to complain loudly if we fail to find the attribute/uniform
+        function getAttribLocation(program, name) {
+            var attributeLocation = gl.getAttribLocation(program, name);
+            if (attributeLocation === -1) {
+                throw 'Cannot find attribute ' + name + '.';
+            }
+            return attributeLocation;
+        }
+
+        function getUniformLocation(program, name) {
+            var attributeLocation = gl.getUniformLocation(program, name);
+            if (attributeLocation === -1) {
+                throw 'Cannot find uniform ' + name + '.';
+            }
+            return attributeLocation;
+        }
+
+        //************** Create shaders **************
+
+        //Create vertex and fragment shaders
+        var vertexShader = compileShader(vertexSource, gl.VERTEX_SHADER);
+        var fragmentShader = compileShader(fragmentSource, gl.FRAGMENT_SHADER);
+
+        //Create shader programs
+        var program = gl.createProgram();
+        gl.attachShader(program, vertexShader);
+        gl.attachShader(program, fragmentShader);
+        gl.linkProgram(program);
+
+        gl.useProgram(program);
+
+        //Set up rectangle covering entire canvas 
+        var vertexData = new Float32Array([
+            -1.0, 1.0, 	// top left
+            -1.0, -1.0, 	// bottom left
+            1.0, 1.0, 	// top right
+            1.0, -1.0, 	// bottom right
+        ]);
+
+        //Create vertex buffer
+        var vertexDataBuffer = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, vertexDataBuffer);
+        gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.STATIC_DRAW);
+
+        // Layout of our data in the vertex buffer
+        var positionHandle = getAttribLocation(program, 'position');
+
+        gl.enableVertexAttribArray(positionHandle);
+        gl.vertexAttribPointer(positionHandle,
+            2, 				// position is a vec2 (2 values per component)
+            gl.FLOAT, // each component is a float
+            false, 		// don't normalize values
+            2 * 4, 		// two 4 byte float components per vertex (32 bit float is 4 bytes)
+            0 				// how many bytes inside the buffer to start from
+        );
+
+        //Set uniform handle
+        var timeHandle = getUniformLocation(program, 'time');
+        var widthHandle = getUniformLocation(program, 'width');
+        var heightHandle = getUniformLocation(program, 'height');
+
+        gl.uniform1f(widthHandle, window.innerWidth);
+        gl.uniform1f(heightHandle, window.innerHeight);
+
+        var lastFrame = Date.now();
+        var thisFrame;
+
+        function draw() {
+
+            //Update time
+            thisFrame = Date.now();
+            time += (thisFrame - lastFrame) / 1000;
+            lastFrame = thisFrame;
+
+            //Send uniforms to program
+            gl.uniform1f(timeHandle, time);
+            //Draw a triangle strip connecting vertices 0-4
+            gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+
+            requestAnimationFrame(draw);
+        }
+
+        draw();
+    </script>
+</body>
+
+</html>
